@@ -17,7 +17,7 @@ working here: /glade/work/ssfcst/sglanvil/
 3. do land run for 1980-2021 that uses the climatological (fake dates) forcing files
 ```
 
-## Note, we removed these files, because they had issues (probably just needed to rerun):
+## Note, we removed these files for the climo, because they had issues (probably just needed to rerun):
 ```
 /glade/scratch/ssfcst/forcing_files/clmforc.NCEPCFSv2.c2019.0.2d.576x1152.TPQWL.2014-02.nc
 /glade/scratch/ssfcst/forcing_files/clmforc.NCEPCFSv2.c2019.0.2d.576x1152.TPQWL.2016-04.nc
@@ -55,7 +55,7 @@ cp /glade/scratch/ssfcst/forcing_files/domain.ncepCFSv2.c2019.0.2d.nc /glade/scr
 sed -i 's/forcing_files/climoLND_forcingFiles/g' user_datm.streams.txt.CLMCRUNCEP.*
 
 2. update the dates available to be 1980-01 thru 2021-12
-just use bash/loop/vi
+just use bash loop, echo, then copy/paste
 
 ### update user_nl_datm
   streams = "datm.streams.txt.CLMCRUNCEP.Solar 1980 1980 2021",
