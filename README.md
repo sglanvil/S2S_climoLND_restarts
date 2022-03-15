@@ -23,7 +23,7 @@ working here: /glade/work/ssfcst/sglanvil/
 /glade/scratch/ssfcst/forcing_files/clmforc.NCEPCFSv2.c2019.0.2d.576x1152.TPQWL.2016-04.nc
 ```
 
-## Creating the climo-forcing land run
+## Making the land run
 ```
 cd /glade/u/home/ssfcst/cesm2_1/cime/scripts
 
