@@ -5,7 +5,8 @@ clear; clc; close all;
 baseDir='/glade/campaign/cesm/development/cross-wg/S2S/CESM2/CLIMOLND/';
 
 % just choosing one day/month
-fileList = dir(fullfile(baseDir,'*','*.clm2.rh0.*-03-00000.nc')); 
+% fileList = dir(fullfile(baseDir,'*','*.clm2.rh0.*-03-00000.nc')); 
+fileList = dir(fullfile(baseDir,'*','*.clm2.h0.*.nc')); 
 
 icounter=0;
 for file={fileList.name}
