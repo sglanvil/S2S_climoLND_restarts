@@ -31,7 +31,7 @@ cd /glade/u/home/ssfcst/cesm2_1/cime/scripts
 
 cd /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo
 
-./xmlchange RUN_REFDIR=/glade/work/ssfcst/sglanvil/S2S_climoLND_restarts/1980-01-01-00000/
+./xmlchange RUN_REFDIR=/glade/work/ssfcst/sglanvil/1980-01-01-00000/
 ./xmlchange RUN_REFCASE=I2000Clm50BgcCrop.002run
 ./xmlchange RUN_REFDATE=1980-01-01
 ./xmlchange GET_REFCASE=TRUE
