@@ -46,6 +46,7 @@ cd /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo
 ./xmlchange DATM_CLMNCEP_YR_END=2021
 ./xmlchange DATM_MODE=CLMCRUNCEP 
 ./xmlchange RESUBMIT=41
+./xmlchange CONTINUE_RUN=FALSE
 
 ### copy the domain file into new forcing file directory
 cp /glade/scratch/ssfcst/forcing_files/domain.ncepCFSv2.c2019.0.2d.nc /glade/scratch/ssfcst/climoLND_forcingFiles/
