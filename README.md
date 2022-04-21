@@ -78,10 +78,8 @@ cd /glade/u/home/ssfcst/cesm2_1/cime/scripts
 
 ./create_clone --clone /glade/scratch/ssfcst/I2000Clm50BgcCrop.002runRealtime --case /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd
 
-cd /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd/
-cd ..
-mkdir 1980-01-01-00000_contd
-cp /glade/scratch/ssfcst/archive/I2000Clm50BgcCrop.002runRealtimeClimo/rest/2021-01-01-00000/* .
+cp /glade/scratch/ssfcst/archive/I2000Clm50BgcCrop.002runRealtimeClimo/rest/2021-01-01-00000/* /glade/work/ssfcst/sglanvil/1980-01-01-00000_contd
+
 cd /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd/
 
 ./xmlchange RUN_REFDIR=/glade/work/ssfcst/sglanvil/1980-01-01-00000_contd/
