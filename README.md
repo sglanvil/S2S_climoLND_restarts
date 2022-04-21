@@ -72,4 +72,37 @@ qcmd -- ./case.build
 ./case.submit
 ```
 
+## Cycling the land run
+cd /glade/u/home/ssfcst/cesm2_1/cime/scripts
 
+./create_clone --clone /glade/scratch/ssfcst/I2000Clm50BgcCrop.002runRealtime --case /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd
+
+cd /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd/
+cd ..
+mkdir 1980-01-01-00000_contd
+cp /glade/scratch/ssfcst/archive/I2000Clm50BgcCrop.002runRealtimeClimo/rest/2021-01-01-00000/* .
+cd /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd/
+
+./xmlchange RUN_REFDIR=/glade/work/ssfcst/sglanvil/1980-01-01-00000_contd/
+./xmlchange RUN_REFCASE=I2000Clm50BgcCrop.002runRealtimeClimo
+./xmlchange RUN_REFDATE=2021-01-01
+./xmlchange GET_REFCASE=TRUE
+./xmlchange RUN_STARTDATE=1980-01-01
+./xmlchange STOP_OPTION=nmonths
+./xmlchange STOP_N=12
+./xmlchange REST_OPTION=nmonths
+./xmlchange REST_N=1
+./xmlchange DOUT_S_SAVE_INTERIM_RESTART_FILES=TRUE
+./xmlchange DATM_CLMNCEP_YR_ALIGN=1980
+./xmlchange DATM_CLMNCEP_YR_START=1980
+./xmlchange DATM_CLMNCEP_YR_END=2021
+./xmlchange DATM_MODE=CLMCRUNCEP 
+./xmlchange RESUBMIT=41
+./xmlchange CONTINUE_RUN=FALSE
+
+cp /glade/work/ssfcst/sglanvil/S2S_climoLND_restarts/user_datm.streams* .
+cp /glade/work/ssfcst/sglanvil/S2S_climoLND_restarts/user_nl_datm .
+
+./case.setup
+qcmd -- ./case.build 
+./case.submit
