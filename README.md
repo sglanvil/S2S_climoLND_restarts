@@ -73,6 +73,7 @@ qcmd -- ./case.build
 ```
 
 ## Cycling the land run
+```
 cd /glade/u/home/ssfcst/cesm2_1/cime/scripts
 
 ./create_clone --clone /glade/scratch/ssfcst/I2000Clm50BgcCrop.002runRealtime --case /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd
@@ -106,3 +107,4 @@ cp /glade/work/ssfcst/sglanvil/S2S_climoLND_restarts/user_nl_datm .
 ./case.setup
 qcmd -- ./case.build 
 ./case.submit
+```
