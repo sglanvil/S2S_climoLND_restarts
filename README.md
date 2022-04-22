@@ -72,7 +72,7 @@ qcmd -- ./case.build
 ./case.submit
 ```
 
-## Cycling the land run
+## Cycling the land run (3 times)
 ```
 cd /glade/u/home/ssfcst/cesm2_1/cime/scripts
 
