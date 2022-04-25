@@ -76,14 +76,18 @@ qcmd -- ./case.build
 ```
 cd /glade/u/home/ssfcst/cesm2_1/cime/scripts
 
+***(update each cycle)***
 ./create_clone --clone /glade/scratch/ssfcst/I2000Clm50BgcCrop.002runRealtime --case /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd
 
+***(update each cycle)***
+mkdir /glade/work/ssfcst/sglanvil/1980-01-01-00000_contd
 cp /glade/scratch/ssfcst/archive/I2000Clm50BgcCrop.002runRealtimeClimo/rest/2021-01-01-00000/* /glade/work/ssfcst/sglanvil/1980-01-01-00000_contd
 
+***(update each cycle)***
 cd /glade/work/ssfcst/sglanvil/I2000Clm50BgcCrop.002runRealtimeClimo_contd/
 
-./xmlchange RUN_REFDIR=/glade/work/ssfcst/sglanvil/1980-01-01-00000_contd/
-./xmlchange RUN_REFCASE=I2000Clm50BgcCrop.002runRealtimeClimo
+./xmlchange RUN_REFDIR=/glade/work/ssfcst/sglanvil/1980-01-01-00000_contd/ ***(update each cycle)***
+./xmlchange RUN_REFCASE=I2000Clm50BgcCrop.002runRealtimeClimo ***(update each cycle)***
 ./xmlchange RUN_REFDATE=2021-01-01
 ./xmlchange GET_REFCASE=TRUE
 ./xmlchange RUN_STARTDATE=1980-01-01
