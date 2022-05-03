@@ -109,4 +109,6 @@ cp /glade/work/ssfcst/sglanvil/S2S_climoLND_restarts/user_nl_datm .
 ./case.setup
 qcmd -- ./case.build 
 ./case.submit
+
+Ended up cycling 3 times, then used the 4th round as reality (run started May 3, 2022)
 ```
